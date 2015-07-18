@@ -52,4 +52,7 @@ group :development, :test do
   gem 'spring'
 
   gem 'bootstrap-sass'
+
+  gem 'devise'
+  
 end
