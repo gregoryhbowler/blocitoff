@@ -38,6 +38,8 @@ gem 'devise'
 
 gem 'figaro', '1.0'
 
+gem 'pundit'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'

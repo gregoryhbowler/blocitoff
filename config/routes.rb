@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
   devise_for :users
+  resources :users
+
   get 'welcome/index'
 
   get 'welcome/about'
 
   get 'welcome/contact'
 
-  root to: 'welcome#index'
+  #root to: 'welcome#index'
+  #root :to => "devise/sessions#new"
+
+  devise_scope :user do
+    root :to => 'devise/sessions#new'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
