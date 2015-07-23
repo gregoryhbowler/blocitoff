@@ -5,13 +5,13 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   #before_action :authenticate_user!
 
-  include Pundit
+  #include Pundit
 
-  def after_sign_in_path_for(resource_or_scope)
+  def after_sign_in_path_for(resource)
     user_path(resource)
   end
 
-  def after_sign_out_path_for(resource_or_scope)
+  def after_sign_out_path_for(resource)
     welcome_index_path
   end
 
