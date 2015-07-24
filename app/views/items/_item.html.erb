@@ -1,0 +1,9 @@
+<h1><%= "Item partial" %></h1>
+
+<div class="span8">
+  <% @items.each do |item| %>
+      <div class="media">
+        <%= "#{item.name}" %>
+      </div>
+  <% end %>
+</div>

@@ -1,1 +1,12 @@
-<%= @user.name %>
+<% if current_user %>
+    <h1 class='col-md-8 pull-left'><%= "#{current_user.name}'s todo list."%></h1>
+<% else %>
+    <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+<% end %>
+<div class='col-md-8 pull-left'>
+  <%= render partial: 'items/form' %>
+</div>
+<div class='col-md-8 pull-left'>
+  <%= render partial: 'items/item' %>
+</div>
