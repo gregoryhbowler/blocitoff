@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
 
   has_many :items
 
+  def admin?
+    role == 'admin'
+  end
+
+
+
 end

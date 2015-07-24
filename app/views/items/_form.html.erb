@@ -1,5 +1,3 @@
-<h2><%= "Form partial" %></h2>
-
 <% if current_user %>
     <%= form_for [current_user, Item.new] do |f| %>
       <div class='form-group'>
