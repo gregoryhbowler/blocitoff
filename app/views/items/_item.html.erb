@@ -1,7 +1,12 @@
 <div class="span8">
   <% @items.each do |item| %>
       <div class="media">
-        <%= "#{item.name}" %>
+        <p>
+          <%= "#{item.name}" %> <br/>
+          <small>
+            <%= "you have " + item.days_left.to_s + " days left to do this." %>
+          </small>
+        </p>
       </div>
   <% end %>
 </div>
