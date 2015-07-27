@@ -59,6 +59,14 @@ user = User.new(
  )
  end
 
+ 5.times do
+     Item.create!(
+     user: users.sample,
+     name: Faker::Lorem.sentence,
+     created_at: 10.days.ago
+ )
+ end
+
 
 puts "Seed finished"
 puts "#{User.count} users"
